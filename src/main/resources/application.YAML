@@ -1,0 +1,25 @@
+server:
+  port: 5000
+spring:
+  application:
+    name: DTPM-Database
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  datasource:
+    url: jdbc:postgresql://localhost:5432/DTPM-Database
+    username: postgres
+    password: 123456
+
+  data:
+    mongodb:
+      uri: mongodb://localhost:2717/DTPM-Database
+
+resources:
+  resource:
+    static:
+      locations: F://Back-end/resources/key/
