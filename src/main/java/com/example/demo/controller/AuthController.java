@@ -1,11 +1,10 @@
 package com.example.demo.controller;
 
 import com.example.demo.common.dto.ResponseAPI;
-import com.example.demo.dto.auth.CreateAuthDto;
-import com.example.demo.dto.auth.login.ReqLogin;
+import com.example.demo.dto.auths.CreateAuthDto;
+import com.example.demo.dto.auths.login.ReqLogin;
 import com.example.demo.exception.ErrorCode;
 import com.example.demo.service.AuthService;
-import com.example.demo.service.JwtService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

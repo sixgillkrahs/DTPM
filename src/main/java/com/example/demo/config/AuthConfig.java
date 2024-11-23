@@ -46,7 +46,6 @@ public class AuthConfig {
                                 ).permitAll()
                                 .anyRequest().authenticated())
                 .csrf(csrf -> csrf.disable());
-                // Thêm filter trước UsernamePasswordAuthenticationFilter
         http.addFilterBefore(jwtFilter(), UsernamePasswordAuthenticationFilter.class);
         return http.build();
     }

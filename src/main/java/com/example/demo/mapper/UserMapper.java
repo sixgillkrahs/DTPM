@@ -1,10 +1,8 @@
 package com.example.demo.mapper;
 
-import com.example.demo.dto.user.CreateUserDto;
-import com.example.demo.dto.user.UserDto;
+import com.example.demo.dto.users.CreateUserDto;
+import com.example.demo.dto.users.UserDto;
 import com.example.demo.model.user.User;
-
-import java.util.UUID;
 
 public class UserMapper {
     public static UserDto toUserDto(User user) {

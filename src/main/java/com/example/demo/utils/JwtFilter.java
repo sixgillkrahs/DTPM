@@ -31,24 +31,20 @@ public class JwtFilter extends OncePerRequestFilter {
         final String authorizationHeader = request.getHeader("Authorization");
         String username = null;
         String jwt = null;
-
-        // Kiểm tra xem có header Authorization không
         if (authorizationHeader != null && authorizationHeader.startsWith("Bearer ")) {
-            jwt = authorizationHeader.substring(7); // Lấy token
-            username = jwtService.extractUsername(jwt); // Lấy tên người dùng từ token
+            jwt = authorizationHeader.substring(7);
+            username = jwtService.extractUsername(jwt);
         }
-
-        // Kiểm tra xem người dùng đã được xác thực chưa
         if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
             UserDetails userDetails = userDetailsService.loadUserByUsername(username);
-            if (jwtService.validateToken(jwt)) { // Sử dụng phương thức validateToken mới
+            if (jwtService.validateToken(jwt)) {
                 UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(
                         userDetails, null, userDetails.getAuthorities());
                 authToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
-                SecurityContextHolder.getContext().setAuthentication(authToken); // Thiết lập thông tin xác thực
+                SecurityContextHolder.getContext().setAuthentication(authToken);
             }
         }
 
-        chain.doFilter(request, response); // Tiếp tục chuỗi filter
+        chain.doFilter(request, response);
     }
 }

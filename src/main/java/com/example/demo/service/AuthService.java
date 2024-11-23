@@ -1,7 +1,7 @@
 package com.example.demo.service;
 
 import com.example.demo.common.dto.ResponseAPI;
-import com.example.demo.dto.auth.CreateAuthDto;
+import com.example.demo.dto.auths.CreateAuthDto;
 
 public interface AuthService {
     public ResponseAPI<Boolean> createUser(CreateAuthDto input);

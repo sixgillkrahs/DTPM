@@ -1,11 +1,10 @@
 package com.example.demo.mapper;
 
-import com.example.demo.dto.auth.AuthDto;
-import com.example.demo.dto.auth.CreateAuthDto;
+import com.example.demo.dto.auths.AuthDto;
+import com.example.demo.dto.auths.CreateAuthDto;
 import com.example.demo.model.auth.Auth;
 
 import java.util.Date;
-import java.util.UUID;
 
 public class AuthMapper {
     public static Auth toUserAuth(CreateAuthDto input) {

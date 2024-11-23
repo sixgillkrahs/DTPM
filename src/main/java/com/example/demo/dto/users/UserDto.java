@@ -1,4 +1,4 @@
-package com.example.demo.dto.auth;
+package com.example.demo.dto.users;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -10,17 +10,23 @@ import java.util.UUID;
 
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
-public class AuthDto {
+@NoArgsConstructor
+public class UserDto {
     private UUID id;
+    private String fullName;
+    private String avatar;
+    private Date dob;
+    private String phone;
+    private String phonePrefix;
     private String email;
-    private UUID userId;
-    private String password;
+    private String gender;
+    private String address;
     private Boolean isDeleted;
     private Boolean isActive;
-    private Date lockUntil;
+    private String searchInfo;
     private Date createdAt;
+    private String createdBy;
     private Date lastUpdatedAt;
-    private String lastUpdatedPassword;
+    private String lastUpdatedBy;
 }

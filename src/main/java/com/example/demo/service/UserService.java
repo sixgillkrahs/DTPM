@@ -1,8 +1,8 @@
 package com.example.demo.service;
 
 import com.example.demo.common.dto.ResponseAPI;
-import com.example.demo.dto.user.CreateUserDto;
-import com.example.demo.dto.user.UserDto;
+import com.example.demo.dto.users.CreateUserDto;
+import com.example.demo.dto.users.UserDto;
 
 import java.util.UUID;
 
